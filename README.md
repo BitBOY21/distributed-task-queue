@@ -75,7 +75,7 @@ The easiest way to run the system is using Docker Compose. This ensures a consis
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/YourUsername/distributed-task-queue.git](https://github.com/YourUsername/distributed-task-queue.git)
+    git clone https://github.com/BitBOY21/distributed-task-queue.git
     cd distributed-task-queue
     ```
 
