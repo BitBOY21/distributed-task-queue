@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  task-queue-service:
+    # בונה את התמונה מהתיקייה הנוכחית
+    build: .
+    container_name: fast-task-queue
+
+    # מחבר את פורט 8000 במחשב שלך לפורט 8000 בקונטיינר
+    ports:
+      - "8000:8000"
+
+    # חיבור הדיסק (Persistence) - החלק הכי חשוב!
+    # זה אומר: "תחבר את database.db מהמחשב שלי לתוך הקונטיינר"
+    # כך המידע נשמר גם אם מכבים את הדוקר.
+    volumes:
+      - ./database.db:/app/database.db
+
+    # אם הקונטיינר נופל, תרים אותו מחדש אוטומטית
+    restart: always

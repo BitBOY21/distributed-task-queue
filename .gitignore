@@ -1,0 +1,8 @@
+# Local Environment and Cache
+.venv/
+venv/
+__pycache__/
+
+# Database Files - DO NOT COMMIT
+database.db
+*.sqlite3
